@@ -24,7 +24,8 @@ const treeParser = require('../../lib/TreeParser.js');
 
 const TRANFORMER_PARAMS = {
   ampUrlPrefix: '/amp',
-  ampUrl: 'https://example.com/amp-version.html'
+  ampUrl: 'https://example.com/amp-version.html',
+  enableExperiment: ['amp-fx-parallax', 'amp-lightbox-viewer']
 };
 
 module.exports = function(testConfig) {
