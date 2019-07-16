@@ -70,7 +70,7 @@
     "@ampproject/toolbox-cli": "file:packages/cli",
     "@ampproject/toolbox-core": "file:packages/core",
     "@ampproject/toolbox-cors": "file:packages/cors",
-    "@ampproject/toolbox-linter": "file:packages/linter",
+    "@ampproject/toolbox-linter": "file:packages/linter/pkg",
     "@ampproject/toolbox-optimizer": "file:packages/optimizer",
     "@ampproject/toolbox-optimizer-express": "file:packages/optimizer-express",
     "@ampproject/toolbox-runtime-version": "file:packages/runtime-version",
