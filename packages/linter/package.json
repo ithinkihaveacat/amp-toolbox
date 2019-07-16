@@ -29,6 +29,7 @@
     "test": "cd tests && for t in helper.js local.js network.js ; do ( test -e $t || $npm_execpath run build ) && ( node $t | tap-parser -t ) || exit 1 ; done ; exit 0",
     "lint": "prettier --check 'src/**/*.ts' 'tests/**/*.ts'",
     "watch": "tsc --watch --resolveJsonModule --module commonjs --target es2018 --esModuleInterop --noImplicitAny --strictNullChecks src/*.ts tests/*.ts",
+    "watch-pkg": "find src -name '*.ts' | entr pack build",
     "package": "$npm_execpath run lint && pack build",
     "publish": "pack publish --any-branch",
     "prepublish": "npm run package",

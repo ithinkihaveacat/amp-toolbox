@@ -81,6 +81,15 @@ Checks the code for lint errors.
 
 Automatically rebuild `*.js` whenever `*.ts` changes.
 
+#### `npm run watch-pkg`
+
+Automatically rebuild the npm package (in `pkg`) whenever `*.ts` changes. This
+is useful if you're fixing a bug or working on a feature that crosses package
+boundaries. (e.g. if `package/foo` depends on `package/linter`, then if you
+symlink `package/foo/node_modules/@ampproject/toolbox-linter` to
+`package/linter/pkg` and run `watch-pkg`, then `package/foo` will automatically
+get updates to `package/linter`.)
+
 #### `npm run package`
 
 Generates npm-installable version of the package in `pkg/`. From another
