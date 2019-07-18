@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "lerna run build",
-    "install": "lerna bootstrap --hoist && lerna run build && rm -rf node_modules/@ampproject/toolbox-linter && ln -s packages/linter/pkg node_modules/@ampproject/toolbox-linter",
+    "q-install": "lerna bootstrap --hoist && lerna run build && rm -rf node_modules/@ampproject/toolbox-linter && ln -s packages/linter/pkg node_modules/@ampproject/toolbox-linter",
     "generate:changelog": "lerna-changelog",
     "test": "npm-run-all build test:node test:browser lint",
     "test:node": "jasmine --config=jasmine.json && cd packages/linter && npm test",
