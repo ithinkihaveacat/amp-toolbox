@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "lerna run build",
-    "install": "npm install packages/* && lerna bootstrap --hoist",
+    "go": "npm install --no-save lerna && lerna bootstrap --hoist --scope @ampproject/toolbox-linter && lerna run build --scope @ampproject/toolbox-linter",
     "postinstall": "ln -s node_modules/@ampproject/toolbox-linter packages/linter/pkg",
     "generate:changelog": "lerna-changelog",
     "test": "npm-run-all build test:node test:browser lint",
