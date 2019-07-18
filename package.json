@@ -4,6 +4,7 @@
   "scripts": {
     "build": "lerna run build",
     "install": "npm install packages/* && lerna bootstrap --hoist",
+    "postinstall": "ln -s node_modules/@ampproject/toolbox-linter packages/linter/pkg",
     "generate:changelog": "lerna-changelog",
     "test": "npm-run-all build test:node test:browser lint",
     "test:node": "jasmine --config=jasmine.json && cd packages/linter && npm test",
@@ -70,7 +71,6 @@
     "@ampproject/toolbox-cli": "file:packages/cli",
     "@ampproject/toolbox-core": "file:packages/core",
     "@ampproject/toolbox-cors": "file:packages/cors",
-    "@ampproject/toolbox-linter": "file:packages/linter/pkg",
     "@ampproject/toolbox-optimizer": "file:packages/optimizer",
     "@ampproject/toolbox-optimizer-express": "file:packages/optimizer-express",
     "@ampproject/toolbox-runtime-version": "file:packages/runtime-version",
