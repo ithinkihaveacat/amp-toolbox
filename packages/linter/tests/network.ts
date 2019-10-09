@@ -281,7 +281,7 @@ withFixture("ampimg4", () =>
     `${AmpImgHeightWidthIsOk.name} - height/width are incorrect, but ignored`,
     runNetworkTest(AmpImgHeightWidthIsOk, "https://pyrite-coil.glitch.me"),
     res => {
-      return res.length === 0
+      return res.length === 1
         ? ""
         : `expected 0 failures, got ${JSON.stringify(res)}`;
     }
